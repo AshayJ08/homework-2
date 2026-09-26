@@ -57,4 +57,17 @@ canvas_collatz(
   n = 10
 )
 ```
+\newpage
 
+## Question 4:
+
+```{r}
+canvas_collatz(
+  colors = c("blue"),
+  n = 1:20
+)
+```
+
+- The code in the previous question creates a visualization of the Collatz conjecture based on one starting value. The code in question 4, provides us numbers 1-20, so the function creates a visualization using 20 different starting values. The result would be a more detailed image as more sequences are being used. 
+
+- It would make sense to use set.seed(1), as we would want to be able to produce the same image consistently when it comes to rendering. Through using this function we ill be able to control the random number generation and be able to control the randomness. 
