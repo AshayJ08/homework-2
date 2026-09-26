@@ -4,11 +4,57 @@ format: pdf
 editor: visual
 ---
 
+#packages
+
 ## Question 1
 
 ```{r}
-#| eval: false
+#| eval: False
 install.packages("aRtsy")
 ```
 
-install.packages() is used speicifically to install a specific package onto your computer and only needs to be run when installing the package for the first library. The library() function's purpose is to load an already existing package into the current session.
+install.packages() is used specifically to install a specific package onto your computer and only needs to be run when installing the package for the first library. The library() function's purpose is to load an already existing package into the current session.
+
+\newpage
+
+## Question 2
+
+```{r}
+library(aRtsy)
+
+```
+
+The Collatz conjecture is a famous unsolved math problem that states that if you repeatedly apply the rules of if a number is even: divide it by 2, and if it is odd: you would multiply it by 3 and add 1. If you repeatedly apply these rules you will always get 1.
+
+Collatz conjecture Latex equation:
+
+$$
+f(n)=
+\begin{cases}
+n/2 & \text{if } n \text{ is even} \\
+3n+1 & \text{if } n \text{ is odd}
+\end{cases}
+$$
+\newpage
+
+## Question 3:
+
+This function creates a visual representation of the Collatz conjecture. The "n" argument determines the number of starting values, while the color shows what color 
+
+part B:
+
+- You get a different output every time because the function uses randomization. Although it is the same code , there are different random values generated, leading to different results
+
+- It would be troublesome to put this code into a .qmd file because the random values of function can be different, leading to varying results , which means the output of the function will look different each time it is rendered
+
+- The set.seed() function essentially lets us control R's number generation.By setting a seed, R will consistently produce the same random values each time the code is run. 
+
+```{r}
+set.seed(13)
+
+canvas_collatz(
+  colors = c("blue"),
+  n = 10
+)
+```
+
