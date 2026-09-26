@@ -1,0 +1,14 @@
+---
+title: "homework-2"
+format: pdf
+editor: visual
+---
+
+## Question 1
+
+```{r}
+#| eval: false
+install.packages("aRtsy")
+```
+
+install.packages() is used speicifically to install a specific package onto your computer and only needs to be run when installing the package for the first library. The library() function's purpose is to load an already existing package into the current session.
